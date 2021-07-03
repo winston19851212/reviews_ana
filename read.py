@@ -6,9 +6,11 @@ with open ('reviews.txt', 'r') as f:
 		count += 1
 		if count % 1000 == 0:
 		    print(len(data))
-print(len(data))
+print('finish reading, have:', len(data), 'lines')
+
+sum_len = 0
+for d in data:
+	sum_len += len(d)
+print('the average length of the messages is ', sum_len/len(data))
 
 
-print(data[0])
-print ('---------')
-print(data[1])
